@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("Nik0la23/KIII_Lab4_Pipeline")
+       app = docker.build("Nik0la23/kiii_lab4")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
